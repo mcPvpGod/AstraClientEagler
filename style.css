@@ -1,4 +1,4 @@
-/* Genel Ayarlar */
+
 * {
   margin: 0;
   padding: 0;
@@ -107,7 +107,6 @@ body {
   color: #888888;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* Grayscale ve opacity animasyonu */
 .disabled-select {
   filter: grayscale(100%);
   opacity: 0.5;

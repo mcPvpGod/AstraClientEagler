@@ -28,7 +28,9 @@ function launchClient() {
     let pageUrl;
     if (selectedClient === 'Vanilla') {
         pageUrl = `Vanilla.html`;
-    } else {
+    } else if(selectedClient === '1.3'){
+        window.open("https://barneycompiler.github.io/AstraClientEagler/javascript/", '_blank');
+    }else{
         pageUrl = `${selectedClient}${selectedResolution}.html`;
     }
 

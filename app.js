@@ -1,3 +1,25 @@
+modules.fastplace = {
+    name: "FastPlace",
+    enabled: false,
+    onTick: function(player) {
+      if (!this.enabled) return;
+      player.rightClickDelay = 0; // Removes delay between right clicks
+    }
+  };
+  modules.killaura = {
+    name: "Killaura",
+    enabled: false,
+    range: 5,
+    onUpdate: function(player) {
+      if (!this.enabled) return;
+      for (let entity of world.getEntities()) {
+        if (entity !== player && entity.isAlive() && player.distanceTo(entity) < this.range) {
+          player.attack(entity);
+        }
+      }
+    }
+  };
+  
 function checkClient() {
     const clientSelect = document.getElementById('clientSelect');
     const resolutionSelect = document.getElementById('resolutionSelect');
